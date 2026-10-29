@@ -1,0 +1,245 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Reviews | Aroma Cafe</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            padding: 30px 5%;
+        }
+
+        .review-card {
+            background: #ffffff;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+            border-left: 5px solid #315747;
+        }
+
+        .review-card h3 {
+            color: #315747;
+            margin-bottom: 10px;
+        }
+
+        .stars {
+            color: #f4b400;
+            font-size: 22px;
+            margin-bottom: 12px;
+        }
+
+        .review-card p {
+            line-height: 1.7;
+        }
+
+        .review-form {
+            max-width: 600px;
+            margin: 30px auto;
+            padding: 25px;
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+        }
+
+        .review-form label {
+            display: block;
+            margin: 15px 0 6px;
+            font-weight: bold;
+        }
+
+        .review-form input,
+        .review-form select,
+        .review-form textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            box-sizing: border-box;
+            font: inherit;
+        }
+
+        .review-form button {
+            margin-top: 18px;
+            padding: 12px 22px;
+            background: #315747;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .review-form button:hover {
+            background: #244235;
+        }
+
+        .review-note {
+            text-align: center;
+            margin: 15px;
+            color: #555;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>Aroma Cafe</h1>
+        <p>Delicious Food and Fresh Coffee</p>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="menu.html">Menu</a>
+        <a href="chefs.html">Chefs</a>
+        <a href="ambience.html">Ambience</a>
+        <a href="reviews.html">Reviews</a>
+        <a href="booking.html">Booking</a>
+    </nav>
+
+    <main>
+
+        <!-- Introduction -->
+        <section class="page-intro">
+            <h2>Customer Reviews</h2>
+            <p>
+                Read what our customers say about their food,
+                service, and experience at Aroma Cafe.
+            </p>
+        </section>
+
+        <!-- Customer Reviews -->
+        <section class="reviews-grid">
+
+            <div class="review-card">
+                <h3>Priya S.</h3>
+                <div class="stars">★★★★★</div>
+                <p>
+                    "The food was delicious, and the cafe atmosphere
+                    was warm and relaxing. I especially loved the coffee!"
+                </p>
+            </div>
+
+            <div class="review-card">
+                <h3>Rahul K.</h3>
+                <div class="stars">★★★★★</div>
+                <p>
+                    "Great taste, friendly staff, and excellent service.
+                    The chicken biryani was wonderful."
+                </p>
+            </div>
+
+            <div class="review-card">
+                <h3>Ananya R.</h3>
+                <div class="stars">★★★★☆</div>
+                <p>
+                    "A lovely place to spend time with friends.
+                    The desserts were tasty and beautifully presented."
+                </p>
+            </div>
+
+            <div class="review-card">
+                <h3>Vikram M.</h3>
+                <div class="stars">★★★★★</div>
+                <p>
+                    "I enjoyed the burgers and refreshing drinks.
+                    The seating was comfortable, too."
+                </p>
+            </div>
+
+            <div class="review-card">
+                <h3>Sneha P.</h3>
+                <div class="stars">★★★★☆</div>
+                <p>
+                    "A nice cafe with a good menu and pleasant ambience.
+                    I would love to visit again."
+                </p>
+            </div>
+
+            <div class="review-card">
+                <h3>Arjun T.</h3>
+                <div class="stars">★★★★★</div>
+                <p>
+                    "Excellent food and a welcoming atmosphere.
+                    A great spot for a family meal."
+                </p>
+            </div>
+
+        </section>
+
+        <!-- Review Submission Form -->
+        <section>
+            <div class="page-intro">
+                <h2>Share Your Experience</h2>
+                <p>Tell us about your visit to Aroma Cafe.</p>
+            </div>
+
+            <form class="review-form" id="reviewForm">
+                <label for="customerName">Your Name</label>
+                <input
+                    type="text"
+                    id="customerName"
+                    name="customerName"
+                    placeholder="Enter your name"
+                    required>
+
+                <label for="rating">Your Rating</label>
+                <select id="rating" name="rating" required>
+                    <option value="">Select a rating</option>
+                    <option value="5">★★★★★ - Excellent</option>
+                    <option value="4">★★★★☆ - Very Good</option>
+                    <option value="3">★★★☆☆ - Good</option>
+                    <option value="2">★★☆☆☆ - Fair</option>
+                    <option value="1">★☆☆☆☆ - Poor</option>
+                </select>
+
+                <label for="comment">Your Review</label>
+                <textarea
+                    id="comment"
+                    name="comment"
+                    rows="5"
+                    placeholder="Write your experience here..."
+                    required></textarea>
+
+                <button type="submit">Submit Review</button>
+                <p id="formMessage" role="status"></p>
+            </form>
+
+            <p class="review-note">
+                The reviews shown above are sample content for this website.
+            </p>
+        </section>
+
+        <div class="back-link">
+            <a href="menu.html">← Explore Our Menu</a>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Aroma Cafe. All rights reserved.</p>
+    </footer>
+
+    <!-- Demo form behaviour -->
+    <script>
+        document.getElementById("reviewForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            document.getElementById("formMessage").textContent =
+                "Thank you for sharing your review! This is a demo form; your review has not been saved.";
+
+            this.reset();
+        });
+    </script>
+
+</body>
+</html>

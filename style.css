@@ -1,0 +1,328 @@
+
+/* =====================================
+   AROMA CAFE - COMMON STYLESHEET
+   ===================================== */
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #fff8ef;
+    color: #333333;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background-color: #315747;
+    color: white;
+    text-align: center;
+    padding: 30px 15px;
+}
+
+header h1 {
+    font-size: 38px;
+    margin-bottom: 5px;
+    letter-spacing: 1px;
+}
+
+header p {
+    font-size: 16px;
+}
+
+/* Navigation Bar */
+nav {
+    background-color: #e8dcc7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 5px;
+    padding: 12px;
+}
+
+nav a {
+    color: #315747;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav a:hover,
+nav a:focus {
+    background-color: #315747;
+    color: white;
+}
+
+/* Main Content */
+main {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px 15px;
+}
+
+/* Page Introduction */
+.page-intro {
+    text-align: center;
+    padding: 30px 15px;
+}
+
+.page-intro h2 {
+    color: #315747;
+    font-size: 32px;
+    margin-bottom: 12px;
+}
+
+.page-intro p {
+    max-width: 800px;
+    margin: auto;
+    font-size: 16px;
+}
+
+/* General Sections */
+section {
+    margin-bottom: 25px;
+}
+
+/* Food Grid */
+.food-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+    padding: 20px 0;
+}
+
+/* Food Cards */
+.food {
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.10);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.food:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+}
+
+/* Food Images */
+.food img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+/* Food Titles */
+.food h3 {
+    color: #315747;
+    font-size: 20px;
+    margin: 15px 10px 8px;
+}
+
+/* Food Description and Price */
+.food p {
+    padding: 0 12px 18px;
+    font-size: 16px;
+}
+
+/* Category Quick Links */
+.quick-links {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 18px;
+    padding: 20px 0;
+}
+
+.quick-links a {
+    display: block;
+    background-color: white;
+    color: #315747;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 25px 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.10);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.quick-links a:hover {
+    background-color: #315747;
+    color: white;
+}
+
+/* Back Link */
+.back-link {
+    text-align: center;
+    margin: 25px 0;
+}
+
+.back-link a {
+    display: inline-block;
+    background-color: #315747;
+    color: white;
+    text-decoration: none;
+    padding: 12px 22px;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+.back-link a:hover {
+    background-color: #244235;
+}
+
+/* General Links */
+main a {
+    color: #315747;
+}
+
+.back-link a,
+.quick-links a {
+    text-decoration: none;
+}
+
+/* Forms */
+form {
+    width: 100%;
+}
+
+input,
+select,
+textarea,
+button {
+    font-family: inherit;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 2px solid #8ca99a;
+    border-color: #315747;
+}
+
+/* Buttons */
+button {
+    cursor: pointer;
+}
+
+/* Reviews and Chef Cards
+   Individual page styles can add extra details. */
+.review-card,
+.chef-card,
+.ambience-card {
+    transition: transform 0.3s ease;
+}
+
+.review-card:hover,
+.chef-card:hover,
+.ambience-card:hover {
+    transform: translateY(-4px);
+}
+
+/* Footer */
+footer {
+    background-color: #315747;
+    color: white;
+    text-align: center;
+    padding: 20px 15px;
+    margin-top: 30px;
+}
+
+footer p {
+    font-size: 14px;
+}
+
+/* Responsive Design - Tablets */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 32px;
+    }
+
+    .page-intro h2 {
+        font-size: 28px;
+    }
+
+    nav {
+        gap: 3px;
+    }
+
+    nav a {
+        padding: 9px 11px;
+        font-size: 14px;
+    }
+
+    .food-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 18px;
+    }
+
+    .food img {
+        height: 180px;
+    }
+}
+
+/* Responsive Design - Mobile Phones */
+@media (max-width: 480px) {
+    header {
+        padding: 22px 10px;
+    }
+
+    header h1 {
+        font-size: 28px;
+    }
+
+    header p {
+        font-size: 14px;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    nav a {
+        text-align: center;
+        padding: 10px;
+    }
+
+    main {
+        padding: 12px;
+    }
+
+    .page-intro {
+        padding: 20px 8px;
+    }
+
+    .page-intro h2 {
+        font-size: 25px;
+    }
+
+    .food-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .food img {
+        height: 220px;
+    }
+
+    .quick-links {
+        grid-template-columns: 1fr;
+    }
+
+    footer {
+        padding: 16px 10px;
+    }
+}

@@ -1,0 +1,178 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ambience | Aroma Cafe</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .ambience-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 25px;
+            padding: 30px 5%;
+        }
+
+        .ambience-card {
+            background: #ffffff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+            transition: transform 0.3s ease;
+        }
+
+        .ambience-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .ambience-card img {
+            width: 100%;
+            height: 230px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .ambience-card h3 {
+            color: #315747;
+            padding: 15px 15px 5px;
+        }
+
+        .ambience-card p {
+            padding: 0 15px 20px;
+            line-height: 1.6;
+        }
+
+        .ambience-message {
+            text-align: center;
+            padding: 20px;
+            margin: 10px auto 30px;
+            max-width: 800px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>Aroma Cafe</h1>
+        <p>Delicious Food and Fresh Coffee</p>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="menu.html">Menu</a>
+        <a href="chefs.html">Chefs</a>
+        <a href="ambience.html">Ambience</a>
+        <a href="reviews.html">Reviews</a>
+        <a href="booking.html">Booking</a>
+    </nav>
+
+    <main>
+
+        <!-- Page Introduction -->
+        <section class="page-intro">
+            <h2>Experience Our Ambience</h2>
+            <p>
+                Discover a welcoming atmosphere where delicious food,
+                comfortable seating, and beautiful interiors come together.
+            </p>
+        </section>
+
+        <!-- Ambience Gallery -->
+        <section class="ambience-grid">
+
+            <div class="ambience-card">
+                <img
+                    src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=900&q=80"
+                    alt="Cozy cafe interior">
+                <h3>Cozy Cafe Interior</h3>
+                <p>
+                    Relax in a warm and welcoming space, perfect for
+                    enjoying coffee and spending time with friends.
+                </p>
+            </div>
+
+            <div class="ambience-card">
+                <img
+                    src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=900&q=80"
+                    alt="Elegant restaurant dining area">
+                <h3>Elegant Dining Area</h3>
+                <p>
+                    Enjoy delicious meals in a comfortable dining
+                    environment with stylish furniture.
+                </p>
+            </div>
+
+            <div class="ambience-card">
+                <img
+                    src="https://images.unsplash.com/photo-1493857671505-72967e2e2760?auto=format&fit=crop&w=900&q=80"
+                    alt="Cafe tables and seating">
+                <h3>Comfortable Seating</h3>
+                <p>
+                    Our seating areas provide a pleasant place for
+                    casual meetings, conversations, and relaxation.
+                </p>
+            </div>
+
+            <div class="ambience-card">
+                <img
+                    src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=900&q=80"
+                    alt="Coffee preparation area">
+                <h3>Fresh Coffee Corner</h3>
+                <p>
+                    Enjoy the inviting aroma of freshly prepared coffee
+                    and your favourite cafe beverages.
+                </p>
+            </div>
+
+            <div class="ambience-card">
+                <img
+                    src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=900&q=80"
+                    alt="Restaurant table setting">
+                <h3>Beautiful Table Settings</h3>
+                <p>
+                    Carefully arranged tables create a pleasant setting
+                    for family meals and special occasions.
+                </p>
+            </div>
+
+            <div class="ambience-card">
+                <img
+                    src="https://images.unsplash.com/photo-1445116572660-236099ec97a0?auto=format&fit=crop&w=900&q=80"
+                    alt="Cafe counter and interior">
+                <h3>Modern Cafe Counter</h3>
+                <p>
+                    A stylish cafe counter welcomes guests to explore
+                    our menu of food, desserts, and beverages.
+                </p>
+            </div>
+
+        </section>
+
+        <!-- Closing Message -->
+        <section class="ambience-message">
+            <h2>A Place to Relax and Enjoy</h2>
+            <p>
+                Whether you are meeting friends, enjoying a family meal,
+                or taking a coffee break, Aroma Cafe welcomes you.
+            </p>
+            <p>
+                <a href="menu.html">Explore Our Menu</a>
+                &nbsp; | &nbsp;
+                <a href="booking.html">Book a Table</a>
+            </p>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Aroma Cafe. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

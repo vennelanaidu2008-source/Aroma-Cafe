@@ -1,0 +1,277 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table Booking | Aroma Cafe</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .booking-container {
+            max-width: 700px;
+            margin: 35px auto;
+            padding: 30px;
+            background: #ffffff;
+            border-radius: 14px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+        }
+
+        .booking-container h2 {
+            text-align: center;
+            color: #315747;
+            margin-bottom: 10px;
+        }
+
+        .booking-container .description {
+            text-align: center;
+            margin-bottom: 25px;
+            color: #555;
+        }
+
+        .form-group {
+            margin-bottom: 18px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 7px;
+            color: #315747;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            box-sizing: border-box;
+            font: inherit;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 18px;
+        }
+
+        .booking-button {
+            width: 100%;
+            padding: 14px;
+            background: #315747;
+            color: white;
+            border: none;
+            border-radius: 7px;
+            font-size: 17px;
+            cursor: pointer;
+        }
+
+        .booking-button:hover {
+            background: #244235;
+        }
+
+        #bookingMessage {
+            text-align: center;
+            margin-top: 18px;
+            color: #315747;
+            font-weight: bold;
+        }
+
+        .booking-info {
+            text-align: center;
+            margin: 30px 15px;
+            line-height: 1.8;
+        }
+
+        @media (max-width: 550px) {
+            .booking-container {
+                margin: 20px 12px;
+                padding: 20px;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+                gap: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>Aroma Cafe</h1>
+        <p>Delicious Food and Fresh Coffee</p>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="menu.html">Menu</a>
+        <a href="chefs.html">Chefs</a>
+        <a href="ambience.html">Ambience</a>
+        <a href="reviews.html">Reviews</a>
+        <a href="booking.html">Booking</a>
+    </nav>
+
+    <main>
+
+        <!-- Introduction -->
+        <section class="page-intro">
+            <h2>Book a Table</h2>
+            <p>
+                Plan your visit to Aroma Cafe.
+                Fill in the details below to request a table reservation.
+            </p>
+        </section>
+
+        <!-- Booking Form -->
+        <section class="booking-container">
+            <h2>Reservation Form</h2>
+            <p class="description">
+                We look forward to welcoming you!
+            </p>
+
+            <form id="bookingForm">
+
+                <div class="form-group">
+                    <label for="customerName">Full Name</label>
+                    <input
+                        type="text"
+                        id="customerName"
+                        name="customerName"
+                        placeholder="Enter your full name"
+                        required>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="you@example.com"
+                            required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input
+                            type="tel"
+                            id="phone"
+                            name="phone"
+                            placeholder="Enter phone number"
+                            pattern="[0-9+\-\s()]{7,20}"
+                            required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="bookingDate">Reservation Date</label>
+                        <input
+                            type="date"
+                            id="bookingDate"
+                            name="bookingDate"
+                            required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="bookingTime">Reservation Time</label>
+                        <input
+                            type="time"
+                            id="bookingTime"
+                            name="bookingTime"
+                            required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="guests">Number of Guests</label>
+                    <select id="guests" name="guests" required>
+                        <option value="">Select guests</option>
+                        <option value="1">1 Guest</option>
+                        <option value="2">2 Guests</option>
+                        <option value="3">3 Guests</option>
+                        <option value="4">4 Guests</option>
+                        <option value="5">5 Guests</option>
+                        <option value="6">6 Guests</option>
+                        <option value="7+">7 or More Guests</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="occasion">Occasion (Optional)</label>
+                    <select id="occasion" name="occasion">
+                        <option value="">Select an occasion</option>
+                        <option value="Birthday">Birthday</option>
+                        <option value="Anniversary">Anniversary</option>
+                        <option value="Business Meeting">Business Meeting</option>
+                        <option value="Family Dinner">Family Dinner</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="requests">Special Requests</label>
+                    <textarea
+                        id="requests"
+                        name="requests"
+                        rows="4"
+                        placeholder="Any seating preferences or special requests?"></textarea>
+                </div>
+
+                <button type="submit" class="booking-button">
+                    Request Reservation
+                </button>
+
+                <p id="bookingMessage" role="status"></p>
+
+            </form>
+        </section>
+
+        <!-- Cafe Information -->
+        <section class="booking-info">
+            <h2>Visit Aroma Cafe</h2>
+            <p>Enjoy delicious food in a warm and welcoming atmosphere.</p>
+            <p><strong>Opening Hours:</strong> Monday – Sunday, 10:00 AM – 10:00 PM</p>
+            <p>
+                Explore our <a href="menu.html">menu</a> before your visit.
+            </p>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Aroma Cafe. All rights reserved.</p>
+    </footer>
+
+    <!-- Demo Form Behaviour -->
+    <script>
+        // Prevent booking dates in the past.
+        const dateInput = document.getElementById("bookingDate");
+        const today = new Date();
+        const localToday = new Date(
+            today.getTime() - today.getTimezoneOffset() * 60000
+        ).toISOString().split("T")[0];
+
+        dateInput.min = localToday;
+
+        document.getElementById("bookingForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            document.getElementById("bookingMessage").textContent =
+                "Thank you! Your reservation request has been entered for this demo. No actual booking has been made.";
+
+            this.reset();
+            dateInput.min = localToday;
+        });
+    </script>
+
+</body>
+</html>
